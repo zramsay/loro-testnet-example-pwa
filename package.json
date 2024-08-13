@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "@lcn-example/pwa-test-3",
-  "version": "0.1.20",
+  "name": "@lcn-example/pwa-test-4",
+  "version": "0.1.21",
   "repository": "https://github.com/LaconicNetwork/loro-testnet-example-pwa",
   "scripts": {
     "dev": "next dev",
