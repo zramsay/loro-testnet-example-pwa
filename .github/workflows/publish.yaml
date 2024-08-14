@@ -34,8 +34,4 @@ jobs:
       - name: "Install jq"
         uses: dcarbone/install-jq-action@v2.1.0
       - name: "Publish App Record"
-        run: |
-          scripts/publish-app-record.sh
-      - name: "Request Deployment"
-        run: |
-          scripts/request-app-deployment.sh
+        run: scripts/publish-app-record.sh
