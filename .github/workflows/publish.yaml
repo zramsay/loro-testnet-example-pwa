@@ -9,7 +9,7 @@ on:
 
 env:
   CERC_REGISTRY_USER_KEY: ${{ secrets.CICD_LACONIC_USER_KEY }}
-  CERC_REGISTRY_BOND_ID: 645c5917dceb36aedf3decfa161834486fc0d58084624fa04645310dce038f9f
+  CERC_REGISTRY_BOND_ID: ${{ secrets.CICD_LACONIC_BOND_ID }}
 
 jobs:
   cns_publish:
