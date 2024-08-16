@@ -24,12 +24,12 @@ services:
     rpcEndpoint: '${CERC_REGISTRY_REST_ENDPOINT:-https://laconicd.laconic.com}'
     gqlEndpoint: '${CERC_REGISTRY_GQL_ENDPOINT:-https://laconicd.laconic.com/api}'
     chainId: ${CERC_REGISTRY_CHAIN_ID:-laconic_9000-1}
-    gas: 200000
-    fees: 200000alnt
+    gas: 9550000
+    fees: 15000000alnt
 EOF
 
 if [ -z "$CERC_REGISTRY_BOND_ID" ]; then
-  bond_id=$(laconic -c $CONFIG_FILE registry bond create --type alnt --quantity 10 --user-key "${CERC_REGISTRY_USER_KEY}")
+  bond_id=$(laconic -c $CONFIG_FILE registry bond create --type alnt --quantity 1000000000000 --user-key "${CERC_REGISTRY_USER_KEY}")
 
   CERC_REGISTRY_BOND_ID=$(echo ${bond_id} | jq -r .bondId)
 fi
