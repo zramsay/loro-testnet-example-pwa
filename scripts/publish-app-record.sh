@@ -29,7 +29,7 @@ services:
 EOF
 
 if [ -z "$CERC_REGISTRY_BOND_ID" ]; then
-  bond_id=$(laconic -c $CONFIG_FILE registry bond create --type alnt --quantity 10 --user-key "${CERC_REGISTRY_USER_KEY}")
+  bond_id=$(laconic -c $CONFIG_FILE registry bond create --type alnt --quantity 100000000 --user-key "${CERC_REGISTRY_USER_KEY}")
   echo $bond_id
   CERC_REGISTRY_BOND_ID=$(echo ${bond_id} | jq -r .bondId)
 fi
